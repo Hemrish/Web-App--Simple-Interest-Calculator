@@ -6,11 +6,7 @@ function compute()
     var interest = parseInt(principal * years * rate /100);
     var year = new Date().getFullYear()+parseInt(years);
     
-    if(principal== null){
-    		alert("Please enter an amount");
-       	document.getElementById("principal").focus();
-        return false;
-    } else if(principal <= 0){
+    if(principal== null || principal <= 0){
     		alert("Enter a positive number");
        	document.getElementById("principal").focus();
         return false;
